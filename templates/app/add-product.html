@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add product</title>
+</head>
+<body>
+<h3>Add product</h3>
+<form action="{% url 'main:add-product' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="col-12">
+        <button class="btn btn-add-primary" type="submit">Submit</button>
+    </div>
+</form>
+
+</body>
+</html>
